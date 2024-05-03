@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block title %}HostingSuccess{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="jumbotron" style="margin-top: 5%;" >
+        <h1 class="display-4">Success!</h1>
+        <p class="lead">Your website is hosted successfully.</p>
+        <hr class="my-4">
+        <p>Also an mail send to your registered mailId</p>
+        <p>Click the button below to view your website.</p>
+        {% if webpage_url %}
+            <a class="btn btn-primary btn-lg" href="{{ webpage_url }}" target="_blank" role="button">View Website</a>
+        {% else %}
+            <a class="btn btn-primary btn-lg" href="#" role="button">View Website</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
